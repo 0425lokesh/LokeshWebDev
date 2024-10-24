@@ -1,0 +1,300 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .card{
+        border: 6px solid none;
+        width: 400px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+        overflow-y: visible;
+    }
+    .card img{
+        height: 150px;
+        width: 200px;
+    }
+    .card-text{
+        font-size: 20px;
+    }
+    .btn{
+        background-color: #0a5a3f;
+        color: #fff;
+    }
+    .btn:hover{
+        border: 2px solid black;
+        background-color: transparent;
+        color: #070707;
+    }
+</style>
+<body>
+    <header>
+        <ul>
+            <div class="dropdown">
+                <i class="fa-solid fa-house fa-2x"></i>
+                <button class="dropdown-btn"><h3> <a href="index.html">Home</a></h3></button>
+                
+            </div>
+            <div class="dropdown">
+                <i class="fa-solid fa-phone fa-2x"></i>
+                <button class="dropdown-btn"><h3> <a href="contact.html">Blogs</a></h3></button>
+                <div class="dropdown-content">
+                    <li>Projects</li>
+                    <li>Awards and Honours</li>
+                </div>
+            </div>
+            <div class="dropdown">
+                <i class="fa-solid fa-globe fa-2x"></i>
+                <button class="dropdown-btn"><h3> <a href="About.html">About</a></h3></button>
+                <div class="dropdown-content">
+                    <li>Achievments</li>
+                    <li>Our Clients</li>
+                    <li>Products</li>
+                </div>
+            </div>
+        </ul>
+        <img src="AIimg.png">
+    </header>
+    <nav>
+        <div class="services">
+            <div class="service">
+                <i class="fa-solid fa-brain fa-4x"></i>
+                <h2>ARTIFICIAL INTELLIGENCE</h2>
+                <h6>Dive Into The Artificial world <br> 
+                    Automate Your Things
+                </h6>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-square-poll-vertical fa-4x"></i>                
+                <h2>DATA ANALYSING</h2>
+                <h6>Analyse Each and Everything <br>
+                    Play With Data
+                </h6>
+            </div>
+            <div class="service">
+                <i class="fas fa-globe fa-4x"></i>
+                <h2>DIGITAL MARKETING</h2>
+                <h6>Advertise and Promote Your Product <br>
+                    Make Your Product More Popular
+                </h6>
+            </div>
+        </div>
+    </nav>
+    <div class="carousel next">
+        <div class="list" id="carousel-list">
+            <div class="item active">
+                <img src="https://cdn.pixabay.com/photo/2015/06/24/15/45/hands-820272_640.jpg">
+                <div class="content">
+                    <div class="title">TEAM WORK</div>
+                    <div class="buttons">
+                        <button>EXPLORE NOW<i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://media.istockphoto.com/id/1133887502/photo/paperwork-and-hands-on-a-board-room-table-at-a-business-presentation-or-seminar.webp?s=1024x1024&w=is&k=20&c=2PxvoOA-sgPKWUq_nj_YpZZjaTcsDsrDK8gRDFo9pAo=">
+                <div class="content">
+                    <div class="title">DIGITAL MARKETING</div>
+                    <div class="buttons">
+                        <button>EXPLORE NOW<i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://cdn.pixabay.com/photo/2019/10/23/08/17/data-4570804_640.jpg">
+                <div class="content">
+                    <div class="title">DATA ANALYSING</div>
+                    <div class="buttons">
+                        <button>EXPLORE NOW<i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="item" onclick="goToSlide(0)">
+                <img src="https://cdn.pixabay.com/photo/2015/06/24/15/45/hands-820272_640.jpg">
+            </div>
+            <div class="item" onclick="goToSlide(1)">
+                <img src="https://media.istockphoto.com/id/1133887502/photo/paperwork-and-hands-on-a-board-room-table-at-a-business-presentation-or-seminar.webp?s=1024x1024&w=is&k=20&c=2PxvoOA-sgPKWUq_nj_YpZZjaTcsDsrDK8gRDFo9pAo=">
+            </div>
+            <div class="item" onclick="goToSlide(2)">
+                <img src="https://cdn.pixabay.com/photo/2019/10/23/08/17/data-4570804_640.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="clients">
+        <h2>OUR CLIENT REVIEWS!</h2>
+        <div class="slider-container" data-aos="fade-up" data-aos-duration="2000">
+            <button class="prev" onclick="scrollLeft()">&#10094;</button> 
+            <div class="slider">
+              <div class="slide">
+                  <div class="card">
+                      <div class="card-body">
+                          <img class="card-img-bottom" src="https://media.istockphoto.com/id/1342247162/photo/handsome-middle-eastern-guy-businessman-posing-next-to-office-center.jpg?b=1&s=170667a&w=0&k=20&c=aFFf4WomNrkbLljIvafbk2ukDK4chb34HGjbqb2sQGs=" alt="Card image">
+                          <h4 class="card-title">Jane Doe</h4>
+                          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem
+                            eos magnam eum quo praesentium.</p>
+                            <a href="#" class="btn">See Profile</a>
+                        </div>
+                  </div>
+                  <div class="card">
+                      <div class="card-body">
+                          <img class="card-img-bottom" src="https://www.profilebakery.com/wp-content/uploads/2023/04/Profile-Image-AI.jpg" alt="Card image">
+                          <h4 class="card-title">Marshal John</h4>
+                          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem
+                               eos magnam eum quo praesentium.</p>
+                               <a href="#" class="btn">See Profile</a>
+                            </div>
+                  </div>
+                  <div class="card">
+                      <div class="card-body">
+                          <img class="card-img-bottom" src="https://th.bing.com/th/id/OIP.5P5bgc5JYWsopon1LbvhuAHaHa?w=500&h=500&rs=1&pid=ImgDetMain" alt="Card image">
+                          <h4 class="card-title">Tony Stark</h4>
+                          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem
+                               eos magnam eum quo praesentium.</p>
+                               <a href="#" class="btn">See Profile</a>
+                            </div>
+                  </div>
+              </div>
+              <div class="slide">
+                  <div class="card" >
+                      <div class="card-body">
+                          <img class="card-img-bottom" src="https://as1.ftcdn.net/v2/jpg/03/65/85/20/1000_F_365852057_mV52iIJS1xtbyGXvJpYT4YhOQejWdnrF.jpg" alt="Card image" >
+                          <h4 class="card-title">Keerthi Kumar</h4>
+                          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem
+                               eos magnam eum quo praesentium.</p>
+                               <a href="#" class="btn">See Profile</a>
+                            </div>
+                  </div>
+                  <div class="card" >
+                      <div class="card-body">
+                          <img class="card-img-bottom" src="https://as1.ftcdn.net/v2/jpg/06/14/70/78/1000_F_614707819_hnF2mSfjA8cFHdF8IwUeAK2KRCaSrYmD.jpg" alt="Card image">
+                          <h4 class="card-title">Jenifer </h4>
+                          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem
+                               eos magnam eum quo praesentium.</p>
+                               <a href="#" class="btn">See Profile</a>
+                            </div>
+                  </div>
+                  <div class="card" >
+                      <div class="card-body">
+                          <img class="card-img-bottom" src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg" alt="Card image" >
+                          <h4 class="card-title">William Marry</h4>
+                          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem
+                               eos magnam eum quo praesentium.</p>
+                          <a href="#" class="btn">See Profile</a>
+                      </div>
+                  </div> 
+              </div>
+            </div>
+          
+            <button class="next" onclick="scrollRight()">&#10095;</button> 
+          </div>
+    </div>
+    </div>
+    <div class="para" data-aos="fade-up" data-aos-duration="3000">
+        <div class="why" data-aos="fade-up" data-aos-duration="5500">
+            <h2>WHY US<i class="fa-solid fa-question fa-1x"></i></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                Ipsum obcaecati, doloremque eum, totam harum voluptate  <br>
+                rem minima animi et omnis cupiditate officiis laborum <br>
+                reiciendis quisquam maiores eos, voluptatibus ut eveniet.</p>
+            <i class="fa-solid fa-lightbulb fa-6x"></i>
+        </div>
+        <div class="why" data-aos="fade-up" data-aos-duration="4000">
+            <h2>WHO WE ARE<i class="fa-solid fa-question fa-1x"></i></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                Ipsum obcaecati, doloremque eum, totam harum voluptate  <br>
+                rem minima animi et omnis cupiditate officiis laborum <br>
+                reiciendis quisquam maiores eos, voluptatibus ut eveniet.</p>
+                <i class="fa-solid fa-users fa-6x"></i>            
+            </div>
+    </div>
+    <div class="service-area">
+        <h2 >OUR SERVICES</h2>
+        <div class="ourservices" data-aos="fade-right" data-aos-duration="1000">
+            <div class="subject">
+                <i class="fa-solid fa-globe fa-2x"></i>
+                <h4 style="margin-left: 50px;"> ERP & B2B</h4>
+                <i class="fa-solid fa-arrow-right fa-2x"></i>
+            </div>
+            <div class="subject">
+                <i class="fa-solid fa-globe fa-2x"></i>
+                <h4>ARTIFICIAL INTELLIGENCE</h4>
+                <i class="fa-solid fa-arrow-right fa-2x"></i>
+            </div>
+            <div class="subject">
+                <i class="fa-solid fa-globe fa-2x"></i>
+                <h4></i>DATA ANALYSING</h4>
+                <i class="fa-solid fa-arrow-right fa-2x"></i>
+            </div>
+            <div class="subject">
+                <i class="fa-solid fa-globe fa-2x"></i>
+                <h4>DIGITAL MARKETING</h4>
+                <i class="fa-solid fa-arrow-right fa-2x"></i>
+            </div>
+            <div class="subject">
+                <i class="fa-solid fa-globe fa-2x"></i>
+                <h4>CLOUD SERVICES</h4>
+                <i class="fa-solid fa-arrow-right fa-2x"></i>
+            </div>
+            <div class="subject">
+                <i class="fa-solid fa-globe fa-2x"></i>
+                <h4>BUSINESS MANAGEMENT</h4>
+                <i class="fa-solid fa-arrow-right fa-2x"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel .item');
+
+    function goToSlide(index) {
+        const list = document.getElementById('carousel-list');
+        list.style.transform = `translateX(-${index * 100}%)`;
+        items.forEach(item => item.classList.remove('active'));
+        items[index].classList.add('active');
+        currentIndex = index;
+    }
+
+    let currentPage = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function updateSlider() {
+    const slider = document.querySelector('.slider');
+    slider.style.transform = `translateX(${-currentPage * 100}%)`;
+    }
+
+    function scrollLeft() {
+    if (currentPage > 0) {
+        currentPage--;
+    } else {
+        currentPage = slides.length - 1; 
+    }
+    updateSlider();
+    }
+
+
+    function scrollRight() {
+    if (currentPage < slides.length - 1) {
+        currentPage++;
+    } else {
+        currentPage = 0; 
+    }
+    updateSlider();
+    }
+
+    updateSlider();
+
+    AOS.init();
+</script>
+</html>
