@@ -1,5 +1,5 @@
 header{
-    background-image: url(https://wallpapercave.com/wp/wp6830287.gif);
+    background-image: url(https://as2.ftcdn.net/v2/jpg/02/15/65/03/1000_F_215650330_RBqxe8OOPSSeiuJyTbbU4dmFELsPekNv.jpg);
     width: 100%;
     height: 100%;
     position: relative;
@@ -30,10 +30,17 @@ header ul{
     display: flex;
     flex-direction: row;
     list-style: none;
-    color: #fff;
+    color: #0d7754;
     gap: 150px;
     padding: 10px 20px;
     background-color: transparent;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+body{
+    position: relative;
+    z-index: 0;
 }
 ul li{
     position: relative;
@@ -50,6 +57,7 @@ ul li{
     font-size: 20px;
     margin: 5px 40px 0px 10px;       
     text-decoration: none;
+    color: #0a4944;
 }
 .dropdown-content{
     display: none;
@@ -85,7 +93,7 @@ ul li{
 }
 .dropdown-btn h3 a{
     text-decoration: none;
-    color: white;
+    color: #0a4944;
 }
 .services{
     display: flex;
@@ -448,7 +456,7 @@ button:hover {
 .subject{
     width: 400px;
     height: 100px;
-    background-color: #f0e9e9;
+    background-color: #fff;
     border: 1px solid rgb(247, 244, 244);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     justify-content: center;
@@ -456,6 +464,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     border-radius: 15px;
+    cursor: pointer;
 }
 .subject h4{
     text-align: center;
@@ -478,7 +487,8 @@ button:hover {
     color: #0a4944;
 }
 .subject:hover{
-    background-color: #0a4944;
+    background-color: #18bdaf;
+    transform: scale(1.1);
 }
 .subject:hover h4{
     color: #fff;
@@ -490,3 +500,148 @@ button:hover {
 .subject:hover .fa-arrow-right{
     color: #fff;
 }
+.ourclients{
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 50px;
+}
+.clientLogo{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(11, 155, 131);
+}
+
+.clientLogo:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.clientLogo .amazon{
+    width:150px;
+    height: 80px;
+    margin: 60px 20px;
+}
+
+.clientLogo .MRF{
+    width:150px;
+    height: 100px;
+    margin: 50px 20px;
+}
+
+.Testimonial {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.Testimonial .test {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.Testimonial .test .test-item {
+    min-width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.thumbnail-test {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+.thumbnail-test .test-item {
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.carousel-ind h2{
+    text-align: center;
+    margin: 80px auto 0px auto;
+    color: #18ac7a;
+}
+.carousel-ind p{
+    text-align: center;
+    margin: -30px auto ;
+    color: #101111;
+}
+.carousel-ind {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin: 10px auto 0px auto;
+  }
+  
+  .ind-slider {
+    display: flex;
+    width: 100%; 
+    overflow-x: scroll;
+    margin-top: 50px;
+    justify-content: space-around;
+    gap: 30px;
+    margin-left: auto;
+    padding-bottom: 20px;
+  }
+  
+  .ind-slide {
+    height: 430px;
+    width: 350px;
+    flex-shrink: 0;
+    border: 2px solid #1ec7b9;
+    background-color: #93e2dc;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    justify-content: center
+  }
+  .ind-slider::-webkit-scrollbar {
+    display: none; 
+  }
+  .carousel-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  .ind-slide .img{
+    width: 350px;
+    height: 250px;
+    border-bottom-right-radius: 50%;
+  }
+  .ind-slide p{
+    margin: 10px 50px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .ind-slide a{
+    color: #333;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px 100px -10px 100px;
+    margin-bottom: -30px;
+  }
+  .ind-slide a .fa-solid{
+    margin: 5px;
+  }
