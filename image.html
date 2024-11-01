@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    .image-container {  
+        position: relative;
+    }  
+    
+    .image-container img {  
+        display: block; 
+    }  
+    
+    .image-container::after {  
+        content: '';  
+        position: absolute;  
+        top: 0;  
+        left: 0;  
+        right: 0;  
+        bottom: 0;  
+        background-color: rgba(255, 0, 0, 0.5); 
+    }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="https://www.compqsoft.com/wp-content/themes/compqtheme/assets/images/connect-bg.png" alt="Sample Image">
+</div>
+
+</body>
+</html>
