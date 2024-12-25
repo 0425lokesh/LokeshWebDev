@@ -53,13 +53,7 @@
   .nav ul li a:hover {
     color: #ff9800;
   }
-  .nav ul li a:hover h5{
-    color: #0f0e0e;
-  }
-  nav h5{
-    color: #0f0e0e;
-    margin: 10px 0px;
-    }
+
 
     .nav-link.active {
       color: orange;

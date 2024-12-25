@@ -1,0 +1,222 @@
+body{
+    height: 100%;
+}
+section{
+    margin-top: 200px;
+}
+
+ section .contactCards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contactCard{
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.contactCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ff9800;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
+    color: #fff;
+}
+.contactCard:hover .fa-solid{
+    color: #fff;
+    border: 3px solid #fff;
+}
+.contactCard:hover h5{
+    color: #fff;
+}
+.contactCard:hover h6{
+    color: #fff;
+}
+.contactCard .fa-solid{
+    margin: 25px auto;
+    color: #ff9800;
+    border: 3px solid #ff9800;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+.contactCard h5{
+    font-weight: bold;
+    color: #ff9800;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+.contactCard h6{
+    color: #ff9800;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0 20px;
+    margin-top: 100px;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* Map Section */
+  .map {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    background-color: #e5e5e5;
+    position: relative;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Contact Form Section */
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+  }
+  
+  .contact-form button {
+    background-color: #ff9800;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #d2a956;
+  }
+
+
+/* Banner Style */
+.contact-banner {
+  background-color: #d38107; /* Amber background */
+  background-image: linear-gradient(135deg, #d38107, #d97a0f); /* Premium gradient effect */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust banner height */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for premium look */
+  margin: 20px 0; /* Margin to create space around banner */
+}
+
+/* Banner Content */
+.banner-content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-content h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+
+/* Tablet responsiveness */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .contact-banner {
+      height: 180px; /* Adjust height for tablets */
+  }
+
+  .banner-content h1 {
+      font-size: 2.5rem; /* Medium font size for tablets */
+  }
+}
+
+@media screen and (max-width:768px) {
+    section .contactCards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactCard{
+        margin: 20px auto;
+        width: 100%;
+        max-width: 360px;
+    }
+    .container{
+        display: grid;
+        width: 100%;
+    }
+    footer{
+        margin-top: 250px;
+    }
+    .contact-banner {
+      height: 150px; /* Adjust height on smaller screens */
+  }
+
+  .banner-content h1 {
+      font-size: 2rem; /* Smaller font size for mobile */
+  }
+}
+@media screen and (max-width:1024px) {
+  section .contactCards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    gap: 20px;
+  }
+}
+

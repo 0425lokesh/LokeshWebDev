@@ -2,7 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="footerstudiologo.png" sizes="32x32">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
@@ -12,43 +14,82 @@
 </head>
 <body>
      <header class="header">
-    <div class="logo">
-     <img src="footerstudiologo.png" alt="">
-    </div>
+      <div class="logo">
+          <a href="index.html"> 
+              <img src="footerstudiologo.png" alt="Logo">
+          </a>
+      </div>
     <nav class="nav" id="navbar">
-      <h5><-------</h5>
       <ul>
         <li><a href="index.html" >Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <h5>-------></h5>
     </nav>
     <button class="menu-toggle" id="menu-toggle"></button>
   </header>
   <section>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-    <h1>loki is a good boy</h1>
-
-  </section>
+    <div class="contact-banner">
+      <div class="banner-content">
+          <h1>Contact Us</h1>
+      </div>
+    </div>
+  
+    <!-- Contact Cards Section -->
+    <div class="contactCards">
+      <div class="contactCard">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+        <h5>Write Us</h5>
+        <h6>+91-9176632544</h6>
+      </div>
+      <div class="contactCard">
+        <i class="fa-solid fa-phone fa-2x"></i>
+        <h5>Contact us</h5>
+        <h6>info@lokeestudio.com</h6>
+      </div>
+      <div class="contactCard">
+        <i class="fa-solid fa-location-dot fa-2x"></i>
+        <h5>Our Office</h5>
+        <h6>No.132a, abc street <br> Avenue main road, <br> valasaravakkam, Chennai 28.</h6>
+      </div>
+    </div>
+  
+    <div class="container">
+      <!-- Map Section -->
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7052657330596!2d80.18666427495737!3d13.054423187268615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266b56dd231b5%3A0x316c51a66a7de7b7!2sPachaiamman%20Koil%20St%2C%20Chennai%2C%20Tamil%20Nadu%20600092!5e0!3m2!1sen!2sin!4v1734864689179!5m2!1sen!2sin" 
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+  
+      <!-- Contact Form Section -->
+      <div class="contact-form">
+        <h2 style="color: #d38107; text-align: center;">Contact Us</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>  
   <footer class="footer">
     <div class="footer-container">
       <!-- Logo -->
       <div class="footer-logo">
-        <img src="footerstudiologo.png" alt="Website Logo" />
+        <a href="index.html">
+          <img src="footerstudiologo.png" alt="Website Logo" />
+        </a>
       </div>
   
       <!-- Navigation Links -->
@@ -64,7 +105,7 @@
       <!-- Contact Info -->
       <div class="footer-contact">
         <h3>Contact</h3>
-        <p><strong>Phone:</strong> +91 91766 31433</p>
+        <p><strong>Phone:</strong> +91 91766 42544</p>
         <p><strong>Email:</strong> info@lokeestudio.com</p>
       </div>
   

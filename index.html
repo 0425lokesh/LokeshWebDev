@@ -35,6 +35,7 @@
         background-color: transparent;
         color: #070707;
     }
+
 </style>
 <body>
     <header>
@@ -222,17 +223,17 @@
         <h2 >OUR SERVICES</h2>
         <div class="ourservices" data-aos="fade-right" data-aos-duration="1000">
             <div class="subject">
-                <i class="fa-solid fa-globe fa-2x"></i>
-                <h4 style="margin-left: 50px;"> ERP & B2B</h4>
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                <h4 style="margin-left: 50px;"> B2B & E-COMMEERCE</h4>
                 <i class="fa-solid fa-arrow-right fa-2x"></i>
             </div>
             <div class="subject">
-                <i class="fa-solid fa-globe fa-2x"></i>
+                <i class="fa-solid fa-brain fa-2x"></i>
                 <h4>ARTIFICIAL INTELLIGENCE</h4>
                 <i class="fa-solid fa-arrow-right fa-2x"></i>
             </div>
             <div class="subject">
-                <i class="fa-solid fa-globe fa-2x"></i>
+                <i class="fa-solid fa-signal fa-2x"></i>
                 <h4></i>DATA ANALYSING</h4>
                 <i class="fa-solid fa-arrow-right fa-2x"></i>
             </div>
@@ -242,16 +243,29 @@
                 <i class="fa-solid fa-arrow-right fa-2x"></i>
             </div>
             <div class="subject">
-                <i class="fa-solid fa-globe fa-2x"></i>
+                <i class="fa-solid fa-cloud fa-2x"></i>
                 <h4>CLOUD SERVICES</h4>
                 <i class="fa-solid fa-arrow-right fa-2x"></i>
             </div>
             <div class="subject">
-                <i class="fa-solid fa-globe fa-2x"></i>
-                <h4>BUSINESS MANAGEMENT</h4>
+                <i class="fa-solid fa-database fa-2x"></i>
+                <h4>DATABASE MANAGEMENT</h4>
                 <i class="fa-solid fa-arrow-right fa-2x"></i>
             </div>
         </div>
+    </div>
+    <div class="awards">
+        <span id="open" class="open">Open Modal</span>
+        
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span id="close" class="close">&times;</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex assumenda.</p>
+            </div>
+        </div>
+    </div>  
+    <div class="">
+        
     </div>
 </body>
 <script>
@@ -265,6 +279,7 @@
         items[index].classList.add('active');
         currentIndex = index;
     }
+    setInterval
 
     let currentPage = 0;
     const slides = document.querySelectorAll('.slide');
@@ -296,5 +311,26 @@
     updateSlider();
 
     AOS.init();
+
+    const modal = document.getElementById('modal');
+    const open = document.getElementById('open');
+    const close = document.getElementById('close');
+
+    open.onclick = function() {
+        modal.style.display = "flex";
+        document.body.classList.add('no-scroll');
+    }
+
+    close.onclick = function() {
+        modal.style.display = "none";
+        document.body.classList.remove('no-scroll');
+    }
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.classList.remove('no-scroll');
+        }
+    }
 </script>
 </html>

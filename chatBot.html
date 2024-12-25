@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    #open {
+        font-size: 16px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+    }
+    #open img{
+        width: 200px;
+        height: 200px;
+    }
+    .modal {
+        display: none;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .modal-content {
+        padding: 20px;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: fadeIn 0.3s ease-in-out;
+        position: relative;
+        background-image: url(https://media.istockphoto.com/id/646557212/photo/color-abstract-presentation-flame-wave-background-with-space-for-title-and-text.jpg?s=1024x1024&w=is&k=20&c=1LuL-PKSXvSY80y0WAj8j0r64SoC2wl-IsnnVlmEu10=);
+    }
+    .close {
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #ebe4e4;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    .form{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+   .conversation p{
+        box-sizing: border-box;
+        border-radius: 30px;
+        float: left;
+        padding: 10px 100px 10px 20px;
+        background-color: rgb(94, 205, 94);
+        color: #fff;
+    }
+    .user-input{
+        float: right;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .user-input p{
+        box-sizing: border-box;
+        border-radius: 30px;
+        float: left;
+        padding: 10px 20px 10px 10px;
+        background-color: rgb(229, 217, 217);
+        color: #333;
+    }
+    .user-input .fa-user{
+        color: rgb(87, 207, 87);
+        margin-top: 30px;
+    }
+    .conversation{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .conversation .fa-robot{
+        margin-top: 30px;
+        color: rgb(87, 207, 87);
+    }
+    .form h2,h5{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: green;
+    }
+    input{
+        padding: 15px 90px;
+        margin-top: 100px;
+        border-radius: 30px;
+        outline: 0;
+        border: 1px solid green;
+    }
+   #submit-button{
+    padding: 15px;
+    background-color: rgb(87, 207, 87);
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+   }
+</style>
+<body>
+    <button id="open">
+        <img src="https://png.pngtree.com/png-vector/20220719/ourmid/pngtree-chat-bot-symbol-and-logo-vector-icon-smart-vector-ai-vector-png-image_37994512.png">
+    </button>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <div class="form">
+                <h2>Welcome Back!</h2>
+                <h5>Your Chat Assistant</h5>
+                <div class="conversation">
+                    <i class="fa-solid fa-robot fa-2x"></i>
+                        <p>Hello Have a nice day, <br>
+                        Iam Here to assist you!</p>
+                </div>
+                <div class="user-input">
+                    <p>Hello what's the whether <br>
+                         report for today</p>
+                    <i class="fa-solid fa-user fa-2x"></i>
+                </div>
+                <form id="input-form">
+                      <input id="input-field" type="text" placeholder="Type your message here">
+                        <button id="submit-button" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const modal = document.getElementById('modal');
+    const open = document.getElementById('open');
+    const close = document.getElementById('close');
+
+    open.onclick = function() {
+        modal.style.display = "flex";
+    }
+
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</html>

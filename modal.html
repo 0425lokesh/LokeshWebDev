@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #open {
+        font-size: 16px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .modal {
+        display: none;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .modal-content {
+        padding: 20px;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: fadeIn 0.3s ease-in-out;
+        position: relative;
+        background-image: linear-gradient(rgb(223, 30, 62),rgb(195, 92, 109),rgb(219, 185, 191));
+    }
+    .close {
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #ebe4e4;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    input{
+        padding: 20px 20px  ;
+        border-radius: 10px;
+        width: 200px;
+        border: 1px solid black;
+        outline: 0;
+    }
+
+    .login{
+        padding: 10px 20px ;
+        background-color: red;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        width: 150px;
+        margin-left: 50px;
+        cursor: pointer;
+    }
+    .login:hover{
+        background-color: rgb(123, 224, 123);
+        color: #333;
+    }
+    .form{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 60px 50px;
+        gap: 30px;
+        margin-left: 50px;
+    }
+    .form h2{
+        margin-right: 100px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+</style>
+<body>
+    <button id="open">Open Modal</button>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <div class="form">
+                <h2>LOGIN</h2>
+                <input type="text" placeholder="Enter Your Username">
+                <input type="password" placeholder="Enter your Password">
+                <button class="login">Login</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const modal = document.getElementById('modal');
+    const open = document.getElementById('open');
+    const close = document.getElementById('close');
+
+    open.onclick = function() {
+        modal.style.display = "flex";
+    }
+
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</html>
