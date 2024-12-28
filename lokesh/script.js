@@ -54,4 +54,16 @@ navActiveLinks.forEach((link) => {
   }
 });
 
+const form = document.getElementById('contact-form');
 
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('user-name').value;
+      const email = document.getElementById('user-email').value;
+      const message = document.getElementById('message').value;
+
+      const mailtoLink = `mailto:lokeshloki0425@gmail.com?subject=Message from ${name}&body=Email: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+      window.location.href = mailtoLink;
+    });

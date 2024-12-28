@@ -1,6 +1,10 @@
 section{
     margin-top: 170px;
 }
+body{
+  height: 100%;
+}
+
 .gallery-container {
     display: flex;
     /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */

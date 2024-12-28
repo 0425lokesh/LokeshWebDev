@@ -370,6 +370,8 @@
   padding: 8px 16px;
   background-color: #d38107;
   color: #fff;
+  width: 200px;
+  margin: 0px auto;
 }
 .login-form button:hover{
   background-color: transparent;
