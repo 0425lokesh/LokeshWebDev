@@ -67,3 +67,40 @@ const form = document.getElementById('contact-form');
 
       window.location.href = mailtoLink;
     });
+
+
+    let currentSlide = 0;
+    function showSlide(index) {
+        let slides = document.querySelectorAll('.testimonial-slide');
+        let dots = document.querySelectorAll('.dot');
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+    setInterval(() => {
+        let nextSlide = (currentSlide + 1) % 2;
+        showSlide(nextSlide);
+    }, 5000);
+
+const images = [
+  "https://badhaihoevents.in/wp-content/uploads/2023/04/eed4fdd1-d166-418f-a855-7164a282cf4e.jpeg",
+  "https://badhaihoevents.in/wp-content/uploads/2021/01/wedding-lawns-in-dwarka-delhi-to-host-the-most-special-day-of-your-life.jpg",
+  "https://badhaihoevents.in/wp-content/uploads/2023/06/Corporate-Event-Planner-in-Noida.jpeg",
+];
+
+const imageElement = document.getElementById('image');
+imageElement.src = images[0];
+
+function changeImage() {
+  imageElement.style.opacity = 0;
+
+  setTimeout(() => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imageElement.src = images[randomIndex];
+    imageElement.style.opacity = 1;
+  }, 1000); 
+}
+
+setInterval(changeImage, 5000);

@@ -17,7 +17,7 @@ body{
   .image-card {
     position: relative;
     overflow: hidden;
-    border: 2px solid #ccc;
+    /* border: 2px solid #ccc; */
     border-radius: 5px;
   }
   
@@ -45,14 +45,37 @@ body{
     text-align: center;
     padding: 5px 0;
     font-size: 14px;
-    opacity: 0;
-    transform: translateY(100%);
+    /* opacity: 0; */
+    /* transform: translateY(100%); */
     transition: all 0.3s ease-in-out;
     display: grid;
   }
+
+  .image-caption p {
+    opacity: 0;
+    transform: translateY(100%);
+  }
   
-  .image-card:hover .image-caption {
+  .image-card:hover .image-caption p{
     opacity: 1;
     transform: translateY(0);
   }
   
+  .line-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70px 0 20px 0;
+  
+  }
+  .line {
+    flex: 0.3;
+    height: 2px;
+    background-color: orange;
+    width: 50px;
+  }
+  .line-text {
+    padding: 0 10px;
+    font-weight: bold;
+    color: orange;
+  }

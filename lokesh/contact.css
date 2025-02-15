@@ -64,6 +64,8 @@ section{
     margin-top: 100px;
     justify-content: center;
     height: 100%;
+    max-height: 540px;
+    margin-bottom: 80px;
   }
   
   /* Map Section */
@@ -183,6 +185,20 @@ section{
   .banner-content h1 {
       font-size: 2.5rem; /* Medium font size for tablets */
   }
+  .contactCard{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ff9800;
+    color: #fff;
+  }
+  .contactCard h5{
+    color: #fff;
+  }
+  .contactCard h6{
+    color: #fff;
+  }
+  .contactCard .fa-solid{
+    color: #fff;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -195,6 +211,18 @@ section{
         margin: 20px auto;
         width: 100%;
         max-width: 360px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #ff9800;
+        color: #fff;
+    }
+    .contactCard h5{
+      color: #fff;
+    }
+    .contactCard h6{
+      color: #fff;
+    }
+    .contactCard .fa-solid{
+      color: #fff;
     }
     .container{
         display: grid;
